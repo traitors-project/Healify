@@ -63,6 +63,52 @@ export default observer(function RootLayout() {
             }}
           />
           <Drawer.Screen
+            name="personalization"
+            options={{
+              drawerLabel: 'Персонализация',
+              title: 'Персонализация',
+              drawerIcon: ({ size, color }) => <Ionicons name="person" size={size} color={color} />,
+            }}
+          />
+          <Drawer.Screen
+            name="storage"
+            options={{
+              drawerLabel: 'Хранилище',
+              title: 'Хранилище',
+              drawerIcon: ({ size, color }) => (
+                <FontAwesome5 name="database" size={size} color={color} />
+              ),
+            }}
+          />
+          <Drawer.Screen
+            name="policy"
+            options={{
+              drawerLabel: 'Политика приватности',
+              title: 'Политика приватности',
+              drawerIcon: ({ size, color }) => (
+                <Ionicons name="shield-half" size={size} color={color} />
+              ),
+            }}
+          />
+          <Drawer.Screen
+            name="about"
+            options={{
+              drawerLabel: 'О приложении',
+              title: 'О приложении',
+              drawerIcon: ({ size, color }) => (
+                <Ionicons name="information-circle" size={size} color={color} />
+              ),
+            }}
+          />
+          <Drawer.Screen
+            name="feedback"
+            options={{
+              drawerLabel: 'Обратная связь',
+              title: 'Обратная связь',
+              drawerIcon: ({ size, color }) => <Ionicons name="mail" size={size} color={color} />,
+            }}
+          />
+          <Drawer.Screen
             name="apps"
             options={{
               title: 'apps',
