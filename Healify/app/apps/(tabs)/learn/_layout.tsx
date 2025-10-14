@@ -1,14 +1,8 @@
-import { Stack, useRouter } from 'expo-router';
+import { Stack } from 'expo-router';
 import { observer } from 'mobx-react-lite';
 import React from 'react';
 
 export default observer(function LearnLayout() {
-  const router = useRouter();
-
-  const onPressBack = () => {
-    router.dismissTo('/learn');
-  };
-
   return (
     <>
       <Stack

@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { Button } from 'react-native-paper';
+import { colorCode } from '@/shared/constants/Colors';
 
 export default function AboutPage() {
   const router = useRouter();
@@ -13,7 +14,7 @@ export default function AboutPage() {
         <View style={styles.list}>
           <Button
             mode="elevated"
-            textColor={'#717ee3'}
+            textColor={colorCode.black}
             style={styles.listItem}
             contentStyle={{
               width: '100%',
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   listItem: {
-    backgroundColor: '#c6cbef',
+    backgroundColor: colorCode.lightGray,
   },
   buttonContent: {
     alignItems: 'flex-start',

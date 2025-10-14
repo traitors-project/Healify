@@ -2,6 +2,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link } from 'expo-router';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import { Surface, Text } from 'react-native-paper';
+import { colorCode } from '@/shared/constants/Colors';
 
 export default function HomePage() {
   return (
@@ -9,32 +10,32 @@ export default function HomePage() {
       <View style={styles.wrapper}>
         <View style={styles.links}>
           <View style={styles.row}>
-            <Link href="/(tabs)/manage">
+            <Link href="/apps/(tabs)/manage">
               <Surface style={styles.surface} elevation={4}>
-                <Ionicons name="grid" size={96} color={'#717ee3'} />
+                <Ionicons name="grid" size={96} color={colorCode.gray} />
                 <Text style={styles.linkTitle}>Управление симптомами</Text>
               </Surface>
             </Link>
 
-            <Link href="/(tabs)/progress">
+            <Link href="/apps/(tabs)/progress">
               <Surface style={styles.surface} elevation={4}>
-                <Ionicons name="stats-chart" size={96} color={'#717ee3'} />
+                <Ionicons name="stats-chart" size={96} color={colorCode.gray} />
                 <Text style={styles.linkTitle}>Прогресс</Text>
               </Surface>
             </Link>
           </View>
 
           <View style={styles.row}>
-            <Link href="/(tabs)/learn">
+            <Link href="/apps/(tabs)/learn">
               <Surface style={styles.surface} elevation={4}>
-                <Ionicons name="book" size={96} color={'#717ee3'} />
+                <Ionicons name="book" size={96} color={colorCode.gray} />
                 <Text style={styles.linkTitle}>Изучить</Text>
               </Surface>
             </Link>
 
-            <Link href="/(tabs)/support">
+            <Link href="/apps/(tabs)/support">
               <Surface style={styles.surface} elevation={4}>
-                <Ionicons name="heart" size={96} color={'#717ee3'} />
+                <Ionicons name="heart" size={96} color={colorCode.gray} />
                 <Text style={styles.linkTitle}>Получить поддержку</Text>
               </Surface>
             </Link>
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   surface: {
-    backgroundColor: '#c6cbef',
+    backgroundColor: colorCode.lightGray,
     height: screenWidth / 2.3,
     width: screenWidth / 2.3,
     maxWidth: 200,
@@ -85,6 +86,6 @@ const styles = StyleSheet.create({
   },
   linkTitle: {
     textAlign: 'center',
-    color: '#717ee3',
+    color: colorCode.black,
   },
 });

@@ -1,30 +1,34 @@
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
-import { useColorScheme } from '@/components/useColorScheme';
-import Colors from '@/constants/Colors';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { Tabs } from 'expo-router';
+import { Tabs, useRouter } from 'expo-router';
 import React from 'react';
-import { Text } from 'react-native-paper';
-
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+import { IconButton, Text } from 'react-native-paper';
+import { colorCode } from '@/shared/constants/Colors';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const router = useRouter();
+  const statusBarHeight = getStatusBarHeight();
 
+  const onPressHome = (): void => {
+    router.navigate('/');
+  };
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
+        tabBarActiveTintColor: colorCode.gray,
+        tabBarActiveBackgroundColor: colorCode.borderGray,
+        headerStyle: {
+          backgroundColor: colorCode.lightGray,
+          height: 64 + statusBarHeight,
+        },
+        headerTitleStyle: {
+          color: colorCode.black,
+        },
+        headerLeft: () => {
+          return (
+            <IconButton icon="home" iconColor={colorCode.black} onPress={onPressHome} size={24} />
+          );
+        },
       }}>
       <Tabs.Screen
         name="manage"

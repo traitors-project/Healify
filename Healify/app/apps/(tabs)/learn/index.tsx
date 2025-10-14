@@ -1,3 +1,4 @@
+import { colorCode } from '@/shared/constants/Colors';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
@@ -13,7 +14,7 @@ export default function LearnListPage() {
             style={styles.listItem}
             contentStyle={{
               width: '100%',
-              height: 150,
+              height: 100,
               justifyContent: 'flex-start',
               marginLeft: 8,
             }}
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   listItem: {
-    backgroundColor: '#c6cbef',
+    backgroundColor: colorCode.lightGray,
   },
   buttonContent: {
     alignItems: 'flex-start',

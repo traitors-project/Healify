@@ -1,3 +1,4 @@
+import { colorCode } from '@/shared/constants/Colors';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
@@ -20,8 +21,8 @@ export default function ManagePage() {
           onValueChange={setListMode}
           theme={{
             colors: {
-              secondaryContainer: '#c6cbef',
-              onSecondaryContainer: '#717ee3',
+              secondaryContainer: colorCode.lightGray,
+              onSecondaryContainer: colorCode.black,
               onSurface: 'rgba(28, 28, 30, 0.68)',
             },
           }}
@@ -40,7 +41,7 @@ export default function ManagePage() {
           <View style={styles.list}>
             <Button
               mode="elevated"
-              textColor={'#717ee3'}
+              textColor={colorCode.black}
               style={styles.listItem}
               compact={true}
               contentStyle={{
@@ -58,7 +59,7 @@ export default function ManagePage() {
           <View style={styles.list}>
             <Button
               mode="elevated"
-              textColor={'#717ee3'}
+              textColor={colorCode.black}
               style={styles.listItem}
               compact={true}
               contentStyle={{
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   listItem: {
-    backgroundColor: '#c6cbef',
+    backgroundColor: colorCode.lightGray,
   },
   buttonContent: {
     alignItems: 'flex-start',

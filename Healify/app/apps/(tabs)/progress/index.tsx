@@ -1,3 +1,4 @@
+import { colorCode } from '@/shared/constants/Colors';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
@@ -12,7 +13,7 @@ export default function ProgressListPage() {
         <View style={styles.list}>
           <Button
             mode="elevated"
-            textColor={'#717ee3'}
+            textColor={colorCode.black}
             style={styles.listItem}
             compact={true}
             contentStyle={{
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
   },
   listItem: {
     justifyContent: 'flex-start',
-    backgroundColor: '#c6cbef',
+    backgroundColor: colorCode.lightGray,
     borderRadius: 20,
   },
   listItemContent: {
