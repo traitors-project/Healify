@@ -1,6 +1,6 @@
 import { colorCode } from '@/shared/constants/Colors';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 
 type ButtonType = {
@@ -20,27 +20,29 @@ export default function InfoListPage() {
   return (
     <>
       <View style={styles.wrapper}>
-        <View style={styles.list}>
-          {
-            buttons.map((item, index) => (
-              <Button
-              key = {index}
-              mode="elevated"
-              textColor={'black'}
-              style={styles.listItem}
-              contentStyle={{
-              width: '100%',
-              height: 100,
-              justifyContent: 'flex-start',
-              marginLeft: 8,
-            }}
-            labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
-            icon={({ color }) => <FontAwesome6 name="magnifying-glass" size={45} color={color} />}>
-            {item.name}
-          </Button>
-            ))
-          }
-        </View>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.list}>
+            {
+              buttons.map((item, index) => (
+                <Button
+                key = {index}
+                mode="elevated"
+                textColor={'black'}
+                style={styles.listItem}
+                contentStyle={{
+                width: '100%',
+                height: 100,
+                justifyContent: 'flex-start',
+                marginLeft: 8,
+              }}
+              labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
+              icon={({ color }) => <FontAwesome6 name="magnifying-glass" size={45} color={color} />}>
+              {item.name}
+            </Button>
+              ))
+            }
+          </View>
+        </ScrollView>
       </View>
     </>
   );

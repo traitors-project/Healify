@@ -1,7 +1,7 @@
 import { colorCode } from '@/shared/constants/Colors';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { Link } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 
 
@@ -20,33 +20,35 @@ export default function LearnListPage() {
   return (
     <>
       <View style={styles.wrapper}>
-        <View style={styles.list}>
-          {
-            buttons.map((item, index) => (
-              <Link href={item.link}
-              key = {index}
-              >
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.list}>
+            {
+              buttons.map((item, index) => (
+                <Link href={item.link}
+                key = {index}
+                >
+                  
+                  <Button
+                      
+                      mode="elevated"
+                      textColor={'black'}
+                      style={styles.listItem}
+                      contentStyle={{
+                      width: '100%',
+                      height: 100,
+                      justifyContent: 'flex-start',
+                      marginLeft: 8,
+                    }}
+                    labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
+                    icon={({ color }) => <FontAwesome6 name="magnifying-glass" size={45} color={color} />}>
+                    {item.name}
+                  </Button>
+                </Link>
                 
-                <Button
-                    
-                    mode="elevated"
-                    textColor={'black'}
-                    style={styles.listItem}
-                    contentStyle={{
-                    width: '100%',
-                    height: 100,
-                    justifyContent: 'flex-start',
-                    marginLeft: 8,
-                  }}
-                  labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
-                  icon={({ color }) => <FontAwesome6 name="magnifying-glass" size={45} color={color} />}>
-                  {item.name}
-                </Button>
-              </Link>
-              
-            ))
-          }
-        </View>
+              ))
+            }
+          </View>
+        </ScrollView>
       </View>
     </>
   );
