@@ -2,12 +2,15 @@ import { Stack } from 'expo-router';
 import { observer } from 'mobx-react-lite';
 import React from 'react';
 
-export default observer(function LearnLayout() {
+export default observer(function InfoLayout() {
   return (
     <>
       <Stack
         screenOptions={{
-          headerShown: false
+          headerStyle: {
+            backgroundColor: '#c6cbef',
+          },
+          headerTintColor: '#717ee3',
         }}
         initialRouteName="index">
         <Stack.Screen name="index" options={{ headerShown: false }} />

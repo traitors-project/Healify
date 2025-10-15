@@ -1,27 +1,51 @@
 import { colorCode } from '@/shared/constants/Colors';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import { Link } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
 
+
+type ButtonType = {
+  name : String,
+  link: any
+}
+
 export default function LearnListPage() {
+  const buttons: ButtonType[] = [
+    {name: "Информация о ПТСР", link:"/apps/(tabs)/learn/info"},
+    {name: "Получить помощь", link:"/apps/(tabs)/learn/help"},
+    {name: "ПТСР и семья", link:"/apps/(tabs)/learn/family"}
+  ]
+
   return (
     <>
       <View style={styles.wrapper}>
         <View style={styles.list}>
-          <Button
-            mode="elevated"
-            textColor={'black'}
-            style={styles.listItem}
-            contentStyle={{
-              width: '100%',
-              height: 100,
-              justifyContent: 'flex-start',
-              marginLeft: 8,
-            }}
-            labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
-            icon={({ color }) => <FontAwesome6 name="magnifying-glass" size={45} color={color} />}>
-            Информация о ПТСР
-          </Button>
+          {
+            buttons.map((item, index) => (
+              <Link href={item.link}
+              key = {index}
+              >
+                
+                <Button
+                    
+                    mode="elevated"
+                    textColor={'black'}
+                    style={styles.listItem}
+                    contentStyle={{
+                    width: '100%',
+                    height: 100,
+                    justifyContent: 'flex-start',
+                    marginLeft: 8,
+                  }}
+                  labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
+                  icon={({ color }) => <FontAwesome6 name="magnifying-glass" size={45} color={color} />}>
+                  {item.name}
+                </Button>
+              </Link>
+              
+            ))
+          }
         </View>
       </View>
     </>
@@ -35,6 +59,7 @@ const styles = StyleSheet.create({
   },
   listItem: {
     backgroundColor: colorCode.lightGray,
+    width: "100%"
   },
   buttonContent: {
     alignItems: 'flex-start',
