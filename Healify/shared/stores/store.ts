@@ -4,6 +4,10 @@ class RuntimeStore{
   showHeaderDrawer = true;
   showHeaderTabs = true;
   showHeaderTools = true;
+  toolType = ''
+  stressValue = 0
+  toolComplited = false
+  resultType = ''
 
   constructor() {
     makeAutoObservable(this);
@@ -16,6 +20,25 @@ class RuntimeStore{
   setShowHeaderTabs(value: boolean) {
     this.showHeaderTabs = value;
   }
+  setToolType(value: string) {
+    this.toolType = value
+  }
+  setStressValue(value: number) {
+    this.stressValue = value
+  }
+  setToolComplited(value: boolean) {
+    this.toolComplited = value
+  }
+  setResultType(value: string) {
+    this.resultType = value
+  }
+  resetToolState(){
+    this.toolType = '';
+    this.stressValue = 0;
+    this.toolComplited = false;
+    this.resultType = '';
+  }
+
 }
 
 export const runtimeStore = new RuntimeStore();

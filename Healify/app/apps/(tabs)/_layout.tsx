@@ -4,8 +4,10 @@ import React from 'react';
 import { IconButton, Text } from 'react-native-paper';
 import { colorCode } from '@/shared/constants/Colors';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { runtimeStore } from '@/shared/stores';
+import { observer } from 'mobx-react-lite';
 
-export default function TabLayout() {
+export default observer(function TabLayout() {
   const router = useRouter();
   const statusBarHeight = getStatusBarHeight();
 
@@ -15,18 +17,31 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: colorCode.gray,
+        tabBarStyle: {
+          display: runtimeStore.showHeaderTabs ? 'flex' : 'none',
+        },
+        headerShown: runtimeStore.showHeaderTabs,
+        tabBarActiveTintColor: colorCode.darkGreen,
         tabBarActiveBackgroundColor: colorCode.borderGray,
         headerStyle: {
-          backgroundColor: colorCode.lightGray,
+          backgroundColor: colorCode.mintGreen,
           height: 64 + statusBarHeight,
         },
         headerTitleStyle: {
-          color: colorCode.black,
+          color: colorCode.darkGreen,
+        },
+        headerTitleContainerStyle: {
+          marginTop: statusBarHeight - 6,
         },
         headerLeft: () => {
           return (
-            <IconButton icon="home" iconColor={colorCode.black} onPress={onPressHome} size={24} />
+            <IconButton
+              icon="home"
+              iconColor={colorCode.darkGreen}
+              onPress={onPressHome}
+              size={24}
+              style={{ marginTop: statusBarHeight }}
+            />
           );
         },
       }}>
@@ -82,4 +97,4 @@ export default function TabLayout() {
       />
     </Tabs>
   );
-}
+});

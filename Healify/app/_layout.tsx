@@ -29,16 +29,16 @@ export default observer(function RootLayout() {
           screenOptions={{
             drawerType: 'slide',
             drawerStyle: {
-              backgroundColor: colorCode.lightGray,
+              backgroundColor: colorCode.mintGreen,
             },
-            drawerActiveBackgroundColor: colorCode.gray,
+            drawerActiveBackgroundColor: colorCode.darkGreen,
             drawerActiveTintColor: '#fff',
             drawerItemStyle: {
               marginBottom: 4,
             },
-            headerTintColor: colorCode.black,
+            headerTintColor: colorCode.darkGreen,
             headerStyle: {
-              backgroundColor: colorCode.lightGray,
+              backgroundColor: colorCode.mintGreen,
               height: runtimeStore.showHeaderDrawer ? 64 + statusBarHeight : 0,
               elevation: runtimeStore.showHeaderDrawer ? 1 : 0,
             },

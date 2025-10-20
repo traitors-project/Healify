@@ -12,14 +12,14 @@ export default function HomePage() {
           <View style={styles.row}>
             <Link href="/apps/(tabs)/manage">
               <Surface style={styles.surface} elevation={4}>
-                <Ionicons name="grid" size={96} color={colorCode.gray} />
+                <Ionicons name="grid" size={96} color={colorCode.darkGreen} />
                 <Text style={styles.linkTitle}>Управление симптомами</Text>
               </Surface>
             </Link>
 
             <Link href="/apps/(tabs)/progress">
               <Surface style={styles.surface} elevation={4}>
-                <Ionicons name="stats-chart" size={96} color={colorCode.gray} />
+                <Ionicons name="stats-chart" size={96} color={colorCode.darkGreen} />
                 <Text style={styles.linkTitle}>Прогресс</Text>
               </Surface>
             </Link>
@@ -28,14 +28,14 @@ export default function HomePage() {
           <View style={styles.row}>
             <Link href="/apps/(tabs)/learn">
               <Surface style={styles.surface} elevation={4}>
-                <Ionicons name="book" size={96} color={colorCode.gray} />
+                <Ionicons name="book" size={96} color={colorCode.darkGreen} />
                 <Text style={styles.linkTitle}>Изучить</Text>
               </Surface>
             </Link>
 
             <Link href="/apps/(tabs)/support">
               <Surface style={styles.surface} elevation={4}>
-                <Ionicons name="heart" size={96} color={colorCode.gray} />
+                <Ionicons name="heart" size={96} color={colorCode.darkGreen} />
                 <Text style={styles.linkTitle}>Получить поддержку</Text>
               </Surface>
             </Link>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   surface: {
-    backgroundColor: colorCode.lightGray,
+    backgroundColor: colorCode.mintGreen,
     height: screenWidth / 2.3,
     width: screenWidth / 2.3,
     maxWidth: 200,
@@ -86,6 +86,6 @@ const styles = StyleSheet.create({
   },
   linkTitle: {
     textAlign: 'center',
-    color: colorCode.black,
+    color: colorCode.darkGreen,
   },
 });

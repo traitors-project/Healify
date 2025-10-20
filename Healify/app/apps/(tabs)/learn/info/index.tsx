@@ -4,43 +4,43 @@ import { StyleSheet, View, ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
 
 type ButtonType = {
-  name : String
-}
+  name: String;
+};
 
 export default function InfoListPage() {
   const buttons: ButtonType[] = [
-    {name: "Что такое ПТСР"},
-    {name: "Распространенность ПТСР"},
-    {name: "Факты о ПТСР"},
-    {name: "Развитие ПТСР"},
-    {name: "Есть ли у меня ПТСР?"},
-    {name: "У меня ПТСР"}
-  ]
+    { name: 'Что такое ПТСР' },
+    { name: 'Распространенность ПТСР' },
+    { name: 'Факты о ПТСР' },
+    { name: 'Развитие ПТСР' },
+    { name: 'Есть ли у меня ПТСР?' },
+    { name: 'У меня ПТСР' },
+  ];
 
   return (
     <>
       <View style={styles.wrapper}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.list}>
-            {
-              buttons.map((item, index) => (
-                <Button
-                key = {index}
+            {buttons.map((item, index) => (
+              <Button
+                key={index}
                 mode="elevated"
-                textColor={'black'}
+                textColor={colorCode.darkGreen}
                 style={styles.listItem}
                 contentStyle={{
-                width: '100%',
-                height: 100,
-                justifyContent: 'flex-start',
-                marginLeft: 8,
-              }}
-              labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
-              icon={({ color }) => <FontAwesome6 name="magnifying-glass" size={45} color={color} />}>
-              {item.name}
-            </Button>
-              ))
-            }
+                  width: '100%',
+                  height: 100,
+                  justifyContent: 'flex-start',
+                  marginLeft: 8,
+                }}
+                labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
+                icon={({ color }) => (
+                  <FontAwesome6 name="magnifying-glass" size={45} color={color} />
+                )}>
+                {item.name}
+              </Button>
+            ))}
           </View>
         </ScrollView>
       </View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   listItem: {
-    backgroundColor: colorCode.lightGray,
+    backgroundColor: colorCode.mintGreen,
   },
   buttonContent: {
     alignItems: 'flex-start',

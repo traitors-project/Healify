@@ -14,7 +14,7 @@ export default function AboutPage() {
         <View style={styles.list}>
           <Button
             mode="elevated"
-            textColor={colorCode.black}
+            textColor={colorCode.darkGreen}
             style={styles.listItem}
             contentStyle={{
               width: '100%',
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   listItem: {
-    backgroundColor: colorCode.lightGray,
+    backgroundColor: colorCode.mintGreen,
   },
   buttonContent: {
     alignItems: 'flex-start',

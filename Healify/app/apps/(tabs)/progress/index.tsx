@@ -13,7 +13,7 @@ export default function ProgressListPage() {
         <View style={styles.list}>
           <Button
             mode="elevated"
-            textColor={colorCode.black}
+            textColor={colorCode.darkGreen}
             style={styles.listItem}
             compact={true}
             contentStyle={{
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   listItem: {
     justifyContent: 'flex-start',
-    backgroundColor: colorCode.lightGray,
+    backgroundColor: colorCode.mintGreen,
     borderRadius: 20,
   },
   listItemContent: {

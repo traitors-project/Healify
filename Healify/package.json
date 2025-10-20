@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
+    "@react-native-community/slider": "^5.0.1",
     "@react-navigation/drawer": "^7.5.10",
     "@react-navigation/native": "^7.1.18",
     "expo": "~54.0.12",
@@ -21,6 +22,7 @@
     "expo-splash-screen": "~31.0.10",
     "expo-status-bar": "~3.0.8",
     "expo-web-browser": "~15.0.8",
+    "lodash": "^4.17.21",
     "mobx": "^6.15.0",
     "mobx-react-lite": "^4.1.1",
     "react": "19.1.0",
@@ -36,6 +38,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",
+    "@types/lodash": "^4.17.20",
     "@types/react": "~19.1.0",
     "husky": "^9.1.7",
     "react-test-renderer": "19.1.0",

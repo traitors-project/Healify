@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   sectionHeader: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: colorCode.gray,
+    color: colorCode.darkGreen,
     marginBottom: 12,
   },
 
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   listItem: {
     fontSize: 15,
-    color: colorCode.black,
+    color: colorCode.darkGreen,
     marginBottom: 8,
     lineHeight: 22,
   },
