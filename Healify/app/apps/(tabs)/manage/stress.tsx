@@ -6,7 +6,12 @@ import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { colorCode } from '@/shared/constants/Colors';
 import { runtimeStore } from '@/shared/stores';
-import { findItemByType, getRandomToolType, toolsTypes } from '@/shared/constants/Tools.Consts';
+import {
+  findItemByType,
+  getRandomToolType,
+  toolResults,
+  toolsTypes,
+} from '@/shared/constants/Tools.Consts';
 
 export default function StressPage() {
   const router = useRouter();
@@ -28,15 +33,40 @@ export default function StressPage() {
       setStressValue(stressValue > 0 ? stressValue - 1 : 0);
     }
   };
-  // TODO доделать логику onPressNext
+
   const onPressNext = () => {
     if (runtimeStore.toolComplited) {
+      if (runtimeStore.stressValue > stressValue) {
+        runtimeStore.setResultType(toolResults.decreased);
+      }
+      if (runtimeStore.stressValue === stressValue) {
+        if (stressValue > 8) {
+          runtimeStore.setResultType(toolResults.dangerousIncreased);
+        } else {
+          runtimeStore.setResultType(toolResults.notChanged);
+        }
+      }
+      if (runtimeStore.stressValue < stressValue) {
+        if (stressValue > 8) {
+          runtimeStore.setResultType(toolResults.dangerousIncreased);
+        } else {
+          runtimeStore.setResultType(toolResults.increased);
+        }
+      }
+
+      router.navigate('./result');
     } else {
       runtimeStore.setStressValue(stressValue);
 
       if (runtimeStore.toolType === toolsTypes.symptoms) {
         runtimeStore.setToolType(getRandomToolType());
       }
+
+      if (stressValue > 8) {
+        router.navigate('./crisis');
+        return;
+      }
+
       const toolLink = findItemByType(runtimeStore.toolType)?.link;
       router.dismissTo(`./tools/${toolLink}`);
     }

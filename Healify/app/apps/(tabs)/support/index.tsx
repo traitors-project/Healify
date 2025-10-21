@@ -1,12 +1,17 @@
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { Button } from 'react-native-paper';
 import { colorCode } from '@/shared/constants/Colors';
+import { runtimeStore } from '@/shared/stores';
 
 export default function AboutPage() {
   const router = useRouter();
+
+  useFocusEffect(() => {
+    runtimeStore.setShowHeaderTabs(true);
+  });
 
   return (
     <>

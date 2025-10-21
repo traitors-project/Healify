@@ -76,6 +76,7 @@ export default function ManagePage() {
               textColor={colorCode.darkGreen}
               style={styles.listItem}
               compact={true}
+              onPress={() => OnPressButton(toolsTypes.soundsOfNature)}
               contentStyle={{
                 width: '100%',
                 height: 60,
@@ -91,6 +92,7 @@ export default function ManagePage() {
               textColor={colorCode.darkGreen}
               style={styles.listItem}
               compact={true}
+              onPress={() => OnPressButton(toolsTypes.timerNotification)}
               contentStyle={{
                 width: '100%',
                 height: 60,
@@ -106,6 +108,7 @@ export default function ManagePage() {
               textColor={colorCode.darkGreen}
               style={styles.listItem}
               compact={true}
+              onPress={() => OnPressButton(toolsTypes.breathingPractices)}
               contentStyle={{
                 width: '100%',
                 height: 60,
@@ -121,6 +124,7 @@ export default function ManagePage() {
               textColor={colorCode.darkGreen}
               style={styles.listItem}
               compact={true}
+              onPress={() => OnPressButton(toolsTypes.quotesForReflection)}
               contentStyle={{
                 width: '100%',
                 height: 60,
@@ -136,6 +140,7 @@ export default function ManagePage() {
               textColor={colorCode.darkGreen}
               style={styles.listItem}
               compact={true}
+              onPress={() => OnPressButton(toolsTypes.meditation)}
               contentStyle={{
                 width: '100%',
                 height: 60,
@@ -151,6 +156,7 @@ export default function ManagePage() {
               textColor={colorCode.darkGreen}
               style={styles.listItem}
               compact={true}
+              onPress={() => OnPressButton(toolsTypes.fallAsleep)}
               contentStyle={{
                 width: '100%',
                 height: 60,

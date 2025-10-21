@@ -30,9 +30,9 @@ export default observer(function TabLayout() {
         headerTitleStyle: {
           color: colorCode.darkGreen,
         },
-        headerTitleContainerStyle: {
-          marginTop: statusBarHeight - 6,
-        },
+        // headerTitleContainerStyle: {
+        //   marginTop: statusBarHeight - 6,
+        // },
         headerLeft: () => {
           return (
             <IconButton
@@ -40,7 +40,7 @@ export default observer(function TabLayout() {
               iconColor={colorCode.darkGreen}
               onPress={onPressHome}
               size={24}
-              style={{ marginTop: statusBarHeight }}
+              // style={{ marginTop: statusBarHeight }}
             />
           );
         },
