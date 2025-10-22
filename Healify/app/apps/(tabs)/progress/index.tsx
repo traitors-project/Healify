@@ -1,4 +1,5 @@
 import { colorCode } from '@/shared/constants/Colors';
+import { runtimeStore } from '@/shared/stores';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
@@ -6,6 +7,11 @@ import { Button } from 'react-native-paper';
 
 export default function ProgressListPage() {
   const router = useRouter();
+
+  const OnPressButton = () => {
+    runtimeStore.setShowHeaderTabs(false);
+    router.navigate('/apps/progress/test-phq9');
+  };
 
   return (
     <>
@@ -16,6 +22,7 @@ export default function ProgressListPage() {
             textColor={colorCode.darkGreen}
             style={styles.listItem}
             compact={true}
+            onPress={() => OnPressButton()}
             contentStyle={{
               width: '100%',
               height: 60,
@@ -24,7 +31,7 @@ export default function ProgressListPage() {
             }}
             labelStyle={[styles.buttonContent, { marginLeft: 20 }]}
             icon={({ color }) => <FontAwesome5 name="book" size={24} color={color} />}>
-            Дневник
+            Тест
           </Button>
         </View>
       </View>
@@ -47,33 +54,9 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 2,
   },
-  background: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    height: '100%',
-  },
   listItem: {
     justifyContent: 'flex-start',
     backgroundColor: colorCode.mintGreen,
     borderRadius: 20,
-  },
-  listItemContent: {
-    width: '90%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    flex: 1,
-  },
-  listItemInfo: {
-    marginLeft: 0,
-    flex: 1,
-  },
-  listItemName: {
-    color: '#717ee3',
-    overflow: 'hidden',
-  },
-  separator: {
-    height: 8,
   },
 });

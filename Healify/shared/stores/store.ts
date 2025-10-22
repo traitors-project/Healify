@@ -8,6 +8,7 @@ class RuntimeStore{
   stressValue = 0
   toolComplited = false
   resultType = ''
+  testPhq9Score = 0
 
   constructor() {
     makeAutoObservable(this);
@@ -37,6 +38,12 @@ class RuntimeStore{
     this.stressValue = 0;
     this.toolComplited = false;
     this.resultType = '';
+  }
+  setTestPhq9Score(value: number){
+    this.testPhq9Score = value
+  }
+  resetTestPhq9Score(){
+    this.testPhq9Score = 0
   }
 
 }
