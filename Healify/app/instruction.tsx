@@ -6,9 +6,18 @@ export default function InstructionPage() {
   return (
     <View style={styles.wrapper}>
       <View style={styles.section}>
-        <Text style={styles.sectionHeader}>1. Начало работы</Text>
+        <Text style={styles.sectionHeader}>Мы рекомендуем:</Text>
         <View style={styles.listContainer}>
-          <Text style={styles.listItem}>• Установите приложение из магазина приложений</Text>
+          <Text style={styles.listItem}>
+            • Отслеживать Ваш прогресс с помощью прохождения тестирований
+          </Text>
+          <Text style={styles.listItem}>
+            • Когда вы чувствуете себя подавленно или находитесь в стрессе, используйте упражнения
+            для улучшения своего состояния
+          </Text>
+          <Text style={styles.listItem}>
+            • Используйте информацию из разделя Изучить для получения новых знаний о ПТСР
+          </Text>
         </View>
       </View>
     </View>

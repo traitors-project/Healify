@@ -6,7 +6,7 @@ export default function PersonalizationPage() {
   return (
     <View style={styles.wrapper}>
       <View>
-        <Text style={styles.text}>Ностройки персонализации</Text>
+        <Text style={styles.text}>Настройки персонализации</Text>
       </View>
     </View>
   );

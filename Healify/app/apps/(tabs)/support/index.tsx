@@ -1,6 +1,5 @@
 import { useFocusEffect, useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { Button } from 'react-native-paper';
 import { colorCode } from '@/shared/constants/Colors';
@@ -12,6 +11,9 @@ export default function AboutPage() {
   useFocusEffect(() => {
     runtimeStore.setShowHeaderTabs(true);
   });
+  const handlePress = (link: string) => {
+    // router.dismissTo();
+  };
 
   return (
     <>
@@ -21,6 +23,9 @@ export default function AboutPage() {
             mode="elevated"
             textColor={colorCode.darkGreen}
             style={styles.listItem}
+            onPress={() => {
+              handlePress('');
+            }}
             contentStyle={{
               width: '100%',
               height: 150,
@@ -30,6 +35,40 @@ export default function AboutPage() {
             labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
             icon={({ color }) => <FontAwesome6 name="handshake" size={45} color={color} />}>
             Контакты помощи
+          </Button>
+          <Button
+            mode="elevated"
+            textColor={colorCode.darkGreen}
+            style={styles.listItem}
+            onPress={() => {
+              handlePress('');
+            }}
+            contentStyle={{
+              width: '100%',
+              height: 150,
+              justifyContent: 'flex-start',
+              marginLeft: 8,
+            }}
+            labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
+            icon={({ color }) => <FontAwesome6 name="hospital" size={45} color={color} />}>
+            Найти профессиональную помощь
+          </Button>
+          <Button
+            mode="elevated"
+            textColor={colorCode.darkGreen}
+            style={styles.listItem}
+            onPress={() => {
+              handlePress('');
+            }}
+            contentStyle={{
+              width: '100%',
+              height: 150,
+              justifyContent: 'flex-start',
+              marginLeft: 8,
+            }}
+            labelStyle={[styles.buttonContent, { marginLeft: 40 }]}
+            icon={({ color }) => <FontAwesome6 name="users" size={45} color={color} />}>
+            Найти собственную поддержку
           </Button>
         </View>
       </View>

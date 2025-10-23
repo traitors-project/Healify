@@ -7,6 +7,10 @@ export default function PolicyPage() {
     <View style={styles.wrapper}>
       <View>
         <Text style={styles.text}>Политика конфиденциальности</Text>
+        <Text>
+          При использовании этого приложжения никакие Ваши данные не будут использованы нами или
+          третьими лицами
+        </Text>
       </View>
     </View>
   );
