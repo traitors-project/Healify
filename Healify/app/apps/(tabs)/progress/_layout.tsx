@@ -51,6 +51,7 @@ export default observer(function ProgressLayout() {
         <Stack.Screen
           name="test-phq9"
           options={{
+            headerTitle: 'Тестирование PHQ-9',
             headerShown: true,
           }}
         />

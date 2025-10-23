@@ -68,6 +68,102 @@ export default function ManagePage() {
               icon={({ color }) => <FontAwesome5 name="bed" size={24} color={color} />}>
               Бессонница
             </Button>
+            <Button
+              mode="elevated"
+              textColor={colorCode.darkGreen}
+              style={styles.listItem}
+              compact={true}
+              onPress={() => OnPressButton(toolsTypes.symptoms)}
+              contentStyle={{
+                width: '100%',
+                height: 60,
+                justifyContent: 'flex-start',
+                marginLeft: 16,
+              }}
+              labelStyle={[styles.buttonContent, { marginLeft: 20 }]}
+              icon={({ color }) => <FontAwesome5 name="tired" size={24} color={color} />}>
+              Тревожность
+            </Button>
+            <Button
+              mode="elevated"
+              textColor={colorCode.darkGreen}
+              style={styles.listItem}
+              compact={true}
+              onPress={() => OnPressButton(toolsTypes.symptoms)}
+              contentStyle={{
+                width: '100%',
+                height: 60,
+                justifyContent: 'flex-start',
+                marginLeft: 16,
+              }}
+              labelStyle={[styles.buttonContent, { marginLeft: 20 }]}
+              icon={({ color }) => <FontAwesome5 name="user-alt-slash" size={24} color={color} />}>
+              Избегание общества
+            </Button>
+            <Button
+              mode="elevated"
+              textColor={colorCode.darkGreen}
+              style={styles.listItem}
+              compact={true}
+              onPress={() => OnPressButton(toolsTypes.symptoms)}
+              contentStyle={{
+                width: '100%',
+                height: 60,
+                justifyContent: 'flex-start',
+                marginLeft: 16,
+              }}
+              labelStyle={[styles.buttonContent, { marginLeft: 20 }]}
+              icon={({ color }) => <FontAwesome5 name="cloud" size={24} color={color} />}>
+              Дереализация
+            </Button>
+            <Button
+              mode="elevated"
+              textColor={colorCode.darkGreen}
+              style={styles.listItem}
+              compact={true}
+              onPress={() => OnPressButton(toolsTypes.symptoms)}
+              contentStyle={{
+                width: '100%',
+                height: 60,
+                justifyContent: 'flex-start',
+                marginLeft: 16,
+              }}
+              labelStyle={[styles.buttonContent, { marginLeft: 20 }]}
+              icon={({ color }) => <FontAwesome5 name="ban" size={24} color={color} />}>
+              Избегание триггеров
+            </Button>
+            <Button
+              mode="elevated"
+              textColor={colorCode.darkGreen}
+              style={styles.listItem}
+              compact={true}
+              onPress={() => OnPressButton(toolsTypes.symptoms)}
+              contentStyle={{
+                width: '100%',
+                height: 60,
+                justifyContent: 'flex-start',
+                marginLeft: 16,
+              }}
+              labelStyle={[styles.buttonContent, { marginLeft: 20 }]}
+              icon={({ color }) => <FontAwesome5 name="sad-tear" size={24} color={color} />}>
+              Воспоминания о травме
+            </Button>
+            <Button
+              mode="elevated"
+              textColor={colorCode.darkGreen}
+              style={styles.listItem}
+              compact={true}
+              onPress={() => OnPressButton(toolsTypes.symptoms)}
+              contentStyle={{
+                width: '100%',
+                height: 60,
+                justifyContent: 'flex-start',
+                marginLeft: 16,
+              }}
+              labelStyle={[styles.buttonContent, { marginLeft: 20 }]}
+              icon={({ color }) => <FontAwesome5 name="angry" size={24} color={color} />}>
+              Гнев
+            </Button>
           </View>
         ) : (
           <View style={styles.list}>
@@ -100,7 +196,7 @@ export default function ManagePage() {
                 marginLeft: 20,
               }}
               labelStyle={[styles.buttonContent, { marginLeft: 26 }]}
-              icon={({ color }) => <FontAwesome5 name="tree" size={24} color={color} />}>
+              icon={({ color }) => <FontAwesome5 name="hourglass-half" size={24} color={color} />}>
               {toolsItems.timerNotification.name}
             </Button>
             <Button
@@ -116,7 +212,7 @@ export default function ManagePage() {
                 marginLeft: 20,
               }}
               labelStyle={[styles.buttonContent, { marginLeft: 26 }]}
-              icon={({ color }) => <FontAwesome5 name="tree" size={24} color={color} />}>
+              icon={({ color }) => <FontAwesome5 name="lungs" size={24} color={color} />}>
               {toolsItems.breathingPractices.name}
             </Button>
             <Button
@@ -132,7 +228,7 @@ export default function ManagePage() {
                 marginLeft: 20,
               }}
               labelStyle={[styles.buttonContent, { marginLeft: 26 }]}
-              icon={({ color }) => <FontAwesome5 name="tree" size={24} color={color} />}>
+              icon={({ color }) => <FontAwesome5 name="comments" size={24} color={color} />}>
               {toolsItems.quotesForReflection.name}
             </Button>
             <Button
@@ -148,7 +244,7 @@ export default function ManagePage() {
                 marginLeft: 20,
               }}
               labelStyle={[styles.buttonContent, { marginLeft: 26 }]}
-              icon={({ color }) => <FontAwesome5 name="tree" size={24} color={color} />}>
+              icon={({ color }) => <FontAwesome5 name="diagnoses" size={24} color={color} />}>
               {toolsItems.meditation.name}
             </Button>
             <Button
@@ -164,7 +260,7 @@ export default function ManagePage() {
                 marginLeft: 20,
               }}
               labelStyle={[styles.buttonContent, { marginLeft: 26 }]}
-              icon={({ color }) => <FontAwesome5 name="tree" size={24} color={color} />}>
+              icon={({ color }) => <FontAwesome5 name="cloud-moon" size={24} color={color} />}>
               {toolsItems.fallAsleep.name}
             </Button>
           </View>

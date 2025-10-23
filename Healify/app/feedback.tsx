@@ -6,6 +6,7 @@ export default function FeedbackPage() {
   return (
     <View style={styles.wrapper}>
       <View>
+        <Text>Мы рады получить любую обратную связь об этом приложении.</Text>
         <Text style={styles.text}>Контакты для обратной связи</Text>
         <Text style={styles.text}>example@example.com</Text>
       </View>
